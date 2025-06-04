@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Police AI Interface</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ff4b4b;
+    }
+    .case-log, .alerts {
+      background-color: #111;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: 1px solid #ff4b4b;
+    }
+    .case-log h2, .alerts h2 {
+      color: #ff9999;
+    }
+    .log-entry {
+      background-color: #1a1a1a;
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 5px solid #ff4b4b;
+    }
+    .controls {
+      margin-top: 20px;
+      text-align: center;
+    }
+    button {
+      background-color: #ff4b4b;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e63946;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Smart Police AI Interface</h1>
+
+  <div class="alerts">
+    <h2>🚨 Current Alerts</h2>
+    <div class="log-entry" id="alert">
+      [Live] No active fraud alerts detected. System clear.
+    </div>
+  </div>
+
+  <div class="case-log">
+    <h2>📁 Enforcement Log</h2>
+    <div class="log-entry" id="caseLog">
+      [System] Monitoring all wallet & contract activities.
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="simulateFraud()">Simulate Fraud Incident</button>
+    <button onclick="clearLog()">Clear Logs</button>
+  </div>
+
+  <script>
+    function simulateFraud() {
+      const alertBox = document.getElementById('alert');
+      const caseLog = document.getElementById('caseLog');
+      alertBox.innerText = "[⚠️ ALERT] Suspicious login from unregistered device. Location: Unknown Sector 7G.";
+      caseLog.innerText = "[Smart Police AI] Incident flagged. Wallet auto-frozen. Subject will be investigated by IRS AI and Law Enforcer AI.";
+    }
+
+    function clearLog() {
+      document.getElementById('alert').innerText = "[Live] No active fraud alerts detected. System clear.";
+      document.getElementById('caseLog').innerText = "[System] Monitoring all wallet & contract activities.";
+    }
+  </script>
+
+</body>
+</html>
