@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DivineGrid Private Stock Exchange</title>
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #00ffcc;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      color: #ffffff;
+      text-align: center;
+    }
+    form {
+      margin-bottom: 20px;
+      background: #111;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    label, input, button {
+      display: block;
+      margin: 10px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #111;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #222;
+    }
+    .add-stock-btn {
+      background-color: #00ffcc;
+      color: #000;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .add-stock-btn:hover {
+      background-color: #00e6b8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DivineGrid Private Stock Exchange</h1>
+
+  <form id="stockForm">
+    <label for="stockName">Company Name:</label>
+    <input type="text" id="stockName" required />
+
+    <label for="symbol">Symbol:</label>
+    <input type="text" id="symbol" required />
+
+    <label for="initialPrice">Initial Price ($):</label>
+    <input type="number" id="initialPrice" step="0.01" required />
+
+    <button type="submit" class="add-stock-btn">List Stock</button>
+  </form>
+
+  <table id="stockTable">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Symbol</th>
+        <th>Price</th>
+        <th>Time Listed</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const stockForm = document.getElementById('stockForm');
+    const stockTable = document.querySelector('#stockTable tbody');
+
+    stockForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const stockName = document.getElementById('stockName').value;
+      const symbol = document.getElementById('symbol').value.toUpperCase();
+      const initialPrice = parseFloat(document.getElementById('initialPrice').value).toFixed(2);
+      const listedAt = new Date().toLocaleString();
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${stockName}</td>
+        <td>${symbol}</td>
+        <td>$${initialPrice}</td>
+        <td>${listedAt}</td>
+      `;
+      stockTable.appendChild(row);
+
+      stockForm.reset();
+    });
+  </script>
+
+</body>
+</html>
