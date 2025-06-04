@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tartarian ID Application | Divine Grid Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00FFAA;
+    }
+
+    form {
+      background-color: #111;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 20px #00FFAA;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #222;
+      border: 1px solid #00FFAA;
+      color: white;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 14px;
+      width: 100%;
+      background-color: #00FFAA;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00cc88;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Apply for Sovereign Tartarian ID</h1>
+  <h2>Issued under the Divine Grid Identity System</h2>
+
+  <form>
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Ex: Carmelo Etienne" required>
+
+    <label for="birth">Date of Birth</label>
+    <input type="date" id="birth" name="birth" required>
+
+    <label for="origin">Place of Birth (Land or Realm)</label>
+    <input type="text" id="origin" name="origin" placeholder="Tartaria Mexum, Divine Realm..." required>
+
+    <label for="photo">Upload Photo (ID Portrait)</label>
+    <input type="file" id="photo" name="photo" accept="image/*">
+
+    <label for="dna">DNA Claim Number (Optional)</label>
+    <input type="text" id="dna" name="dna" placeholder="Auto-linked to DNA registry if provided.">
+
+    <label for="bio">Remarks or Status Notes</label>
+    <textarea id="bio" name="bio" rows="4" placeholder="Divine Status, Diplomatic Notes, etc."></textarea>
+
+    <button type="submit">Submit ID Request</button>
+  </form>
+
+  <div class="footer">
+    &copy; 2025 Divine Grid Network — All Rights Reserved under Divine, Natural, and Tartarian Law
+  </div>
+
+</body>
+</html>
