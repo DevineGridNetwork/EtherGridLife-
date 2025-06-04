@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Wallet Dashboard</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #00ffcc;
+    }
+    .wallet {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #00ffcc;
+    }
+    .wallet h2 {
+      color: #00ccff;
+      margin-bottom: 10px;
+    }
+    .wallet p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+    .alert {
+      background-color: #330000;
+      padding: 10px;
+      border-left: 5px solid red;
+      margin-bottom: 20px;
+      color: #ffaaaa;
+      font-weight: bold;
+    }
+    .log {
+      background: #0f0f0f;
+      padding: 15px;
+      border: 1px solid #00ccff;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .log h3 {
+      color: #66ff99;
+      margin-bottom: 10px;
+    }
+    .log p {
+      font-size: 13px;
+    }
+    button {
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #00e6b8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Smart Wallet Dashboard</h1>
+
+  <div class="wallet">
+    <h2>Wallet Overview</h2>
+    <p><strong>USD Balance:</strong> $1,500,000</p>
+    <p><strong>DavidCoin:</strong> 2,400 DC</p>
+    <p><strong>GoliathCoin:</strong> 1,120 GC</p>
+    <p><strong>AlmightyCoin:</strong> 12 AC</p>
+    <p><strong>Speed of Light Coin:</strong> 3 SLC</p>
+    <p><strong>Tartarian Dollar:</strong> 75,000 TD</p>
+    <p><strong>Net Asset Value (NAV):</strong> $912 Billion</p>
+  </div>
+
+  <div class="alert" id="fraudAlert" style="display: none;">
+    ⚠️ ALERT: Unusual transaction detected. Smart Police AI activated.
+  </div>
+
+  <button onclick="simulateFraud()">Test Fraud Detection</button>
+
+  <div class="log">
+    <h3>Smart Police Log</h3>
+    <p id="logEntry">[System] Monitoring transactions... All secure.</p>
+  </div>
+
+  <script>
+    function simulateFraud() {
+      document.getElementById('fraudAlert').style.display = 'block';
+      document.getElementById('logEntry').innerText = "[Smart Police AI] Unauthorized withdrawal attempt from GoliathCoin detected. Location: Unknown. Action: Blocked and logged.";
+    }
+
+    // Future real-time connection to backend:
+    // fetch('/api/wallet/balance') and render real data
+  </script>
+
+</body>
+</html>
