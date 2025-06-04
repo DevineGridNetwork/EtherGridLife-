@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contract Bridge & Dispute Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F4F4F4;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      border: 8px solid #1B3A4B;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #1B3A4B;
+    }
+
+    .form-section {
+      margin-top: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      background-color: #00C853;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #009140;
+    }
+
+    .footer {
+      text-align: center;
+      color: #888;
+      margin-top: 40px;
+    }
+
+    .success-msg {
+      background: #DFF0D8;
+      border: 1px solid #A9DFBF;
+      padding: 15px;
+      margin-top: 20px;
+      color: #2E7D32;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Divine Contract Bridge</h1>
+    <h2>Submit a Contract Request or Dispute Notice</h2>
+
+    <div class="form-section">
+      <label for="fullName">Full Legal Name</label>
+      <input type="text" id="fullName" placeholder="Your full legal or spiritual name" />
+
+      <label for="email">Email or Contact Portal</label>
+      <input type="email" id="email" placeholder="you@domain.com or contact portal address" />
+
+      <label for="relation">Type of Submission</label>
+      <select id="relation">
+        <option value="New Contract Request">New Contract Request</option>
+        <option value="Existing Contract Update">Existing Contract Update</option>
+        <option value="Private Treaty Initiation">Private Treaty Initiation</option>
+        <option value="Dispute or Grievance Filing">Dispute or Grievance Filing</option>
+        <option value="Lien Dispute or Correction">Lien Dispute or Correction</option>
+        <option value="Inheritance or Claim Form">Inheritance or Claim Form</option>
+      </select>
+
+      <label for="subject">Subject / Title</label>
+      <input type="text" id="subject" placeholder="e.g. Real Estate Dispute, Bond Claim, etc." />
+
+      <label for="details">Full Description / Reason</label>
+      <textarea id="details" rows="6" placeholder="State your full complaint, request, claim, or offer. Be specific. Include references, dates, and names."></textarea>
+
+      <label for="attachments">Evidence or Attachments (URLs only)</label>
+      <textarea id="attachments" rows="2" placeholder="e.g. https://link-to-pdf.com/evidence123"></textarea>
+
+      <button onclick="submitForm()">Submit Contract or Dispute</button>
+      <div class="success-msg" id="successMsg">✅ Your form has been submitted successfully.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Divine Grid Network | Contract Court of Tartaria Mexum
+  </div>
+
+  <script>
+    function submitForm() {
+      const name = document.getElementById('fullName').value;
+      const email = document.getElementById('email').value;
+      const type = document.getElementById('relation').value;
+      const subject = document.getElementById('subject').value;
+      const details = document.getElementById('details').value;
+
+      if (!name || !email || !type || !subject || !details) {
+        alert("Please fill in all required fields.");
+        return;
+      }
+
+      // For now, just show confirmation
+      document.getElementById('successMsg').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
