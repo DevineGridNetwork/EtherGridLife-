@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divine AI Trust Builder</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #ffd700;
+    }
+    form {
+      max-width: 850px;
+      margin: auto;
+      background-color: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #ffd700;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background: #222;
+      color: #fff;
+      border: 1px solid #444;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 25px;
+      background-color: #ffd700;
+      color: #000;
+      padding: 12px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #e6c200;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Divine AI Trust Builder</h1>
+  <form id="trustForm">
+    <label for="trustName">Name of Trust</label>
+    <input type="text" id="trustName" placeholder="e.g. House of Etienne Sovereign Trust" required />
+
+    <label for="trustor">Grantor / Trustor Name</label>
+    <input type="text" id="trustor" placeholder="Creator of the Trust" required />
+
+    <label for="trustees">Trustees (separate by commas)</label>
+    <input type="text" id="trustees" placeholder="e.g. Sophia Etienne, Michael Johnson" required />
+
+    <label for="beneficiaries">Beneficiaries (separate by commas)</label>
+    <input type="text" id="beneficiaries" placeholder="e.g. Carmelo Jr., Family Estate" required />
+
+    <label for="assets">Assets Assigned to Trust</label>
+    <textarea id="assets" rows="4" placeholder="List assets: real estate, crypto, business interests, vehicles, IP, bonds, etc." required></textarea>
+
+    <label for="jurisdiction">Jurisdiction / Law System</label>
+    <select id="jurisdiction" required>
+      <option value="">Select Jurisdiction</option>
+      <option value="Tartaria Mexum">Tartaria Mexum</option>
+      <option value="Kingdom of God Constitution">Kingdom of God Constitution</option>
+      <option value="Natural Law">Natural Law</option>
+      <option value="Divine Law">Divine Law</option>
+      <option value="Common Law">Common Law</option>
+      <option value="1776 Organic Constitution">1776 Organic Constitution</option>
+    </select>
+
+    <label for="date">Date of Creation</label>
+    <input type="date" id="date" required />
+
+    <button type="submit">Generate Divine Trust Document</button>
+  </form>
+
+  <div class="footer">
+    Divine Grid Network © 2025 — Trust Builder AI Portal
+  </div>
+
+  <script>
+    document.getElementById("trustForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const trustName = document.getElementById("trustName").value;
+      const trustor = document.getElementById("trustor").value;
+      const trustees = document.getElementById("trustees").value;
+      const beneficiaries = document.getElementById("beneficiaries").value;
+      const assets = document.getElementById("assets").value;
+      const jurisdiction = document.getElementById("jurisdiction").value;
+      const date = document.getElementById("date").value;
+
+      const declaration = `
+        <h2>${trustName}</h2>
+        <p><strong>Created By:</strong> ${trustor}</p>
+        <p><strong>Date:</strong> ${date}</p>
+        <p><strong>Jurisdiction:</strong> ${jurisdiction}</p>
+        <p><strong>Trustees:</strong> ${trustees}</p>
+        <p><strong>Beneficiaries:</strong> ${beneficiaries}</p>
+        <h3>Assigned Trust Assets:</h3>
+        <p>${assets.replace(/\n/g, '<br>')}</p>
+        <hr/>
+        <p>This document is certified by the Divine AI Trust Builder. Enforced under Tartaria Mexum and all interdimensional constitutions of Divine Law and Natural Order. Recorded on the EtherGrid™ and mirrored into both public and private ledgers.</p>
+      `;
+
+      const output = window.open("", "_blank");
+      output.document.write("<html><head><title>Divine Trust Declaration</title></head><body style='background:#000;color:#fff;padding:20px;font-family:Arial'>" + declaration + "</body></html>");
+    });
+  </script>
+
+</body>
+</html>
