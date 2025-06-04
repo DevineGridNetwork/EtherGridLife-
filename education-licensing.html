@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DivineGrid Education & Licensing Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00ffe0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #111;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffe0;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #00ffe0;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 14px 22px;
+      background-color: #00ffe0;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00d6bd;
+    }
+
+    .note {
+      margin-top: 30px;
+      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DivineGrid University & Licensing</h1>
+  <h2>Federal · State · Local · International · Interdimensional</h2>
+
+  <div class="container">
+    <p>This portal allows the creation and licensing of education institutions, universities, and training facilities. All licenses are divine law-compliant and supersede any shut-down federal authority.</p>
+
+    <form id="licenseForm">
+      <label for="schoolName">Institution / School Name</label>
+      <input type="text" id="schoolName" placeholder="e.g., Tartaria Mexum University">
+
+      <label for="type">Type of Institution</label>
+      <select id="type">
+        <option value="university">University</option>
+        <option value="college">College</option>
+        <option value="trade">Trade / Apprenticeship</option>
+        <option value="local">Local School (K–12)</option>
+        <option value="other">Other / Ministry / Private Org</option>
+      </select>
+
+      <label for="jurisdiction">Jurisdiction</label>
+      <select id="jurisdiction">
+        <option value="divine">Divine Law</option>
+        <option value="state">State-Level Charter</option>
+        <option value="municipal">Municipal Recognition</option>
+        <option value="tartarian">Tartarian Federal License</option>
+        <option value="interdimensional">Interdimensional License</option>
+      </select>
+
+      <label for="licensePurpose">License Purpose</label>
+      <textarea id="licensePurpose" placeholder="Explain the scope, mission, curriculum focus..."></textarea>
+
+      <label for="contactPhone">Future AI Call Routing # (optional)</label>
+      <input type="text" id="contactPhone" placeholder="+1 (555) 123-4567">
+
+      <button type="button" onclick="submitLicense()">Submit License Request</button>
+    </form>
+
+    <div class="note">
+      Once submitted, your license is stored in DivineGrid's Book of Records. AI will process this data in the background.<br>
+      All data is subject to Natural Law, Divine Law, Universal Law, and Constitution of 1776.
+    </div>
+  </div>
+
+  <script>
+    function submitLicense() {
+      const school = document.getElementById('schoolName').value.trim();
+      const type = document.getElementById('type').value;
+      const jurisdiction = document.getElementById('jurisdiction').value;
+      const purpose = document.getElementById('licensePurpose').value.trim();
+      const phone = document.getElementById('contactPhone').value.trim();
+
+      if (!school || !purpose) {
+        alert("Please complete all required fields.");
+        return;
+      }
+
+      alert("✅ License submitted to Divine Grid Records.\nInstitution: " + school + "\nJurisdiction: " + jurisdiction + "\nCall Link Stored: " + (phone || "Not provided"));
+    }
+  </script>
+
+</body>
+</html>
