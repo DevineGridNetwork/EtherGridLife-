@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Writ Generator | Divine Grid Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00FFAA;
+    }
+
+    form {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #111;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00FFAA;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #222;
+      border: 1px solid #00FFAA;
+      color: white;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #00FFAA;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #00cc88;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Divine Writ Generator</h1>
+  <h2>Create and File Sacred Writs of Authority</h2>
+
+  <form>
+    <label for="writType">Type of Writ</label>
+    <select id="writType" name="writType">
+      <option value="mandamus">Writ of Mandamus</option>
+      <option value="habeas">Writ of Habeas Corpus</option>
+      <option value="arrest">Writ of Arrest</option>
+      <option value="error">Writ of Error</option>
+      <option value="execution">Writ of Execution</option>
+      <option value="quo-warranto">Writ of Quo Warranto</option>
+      <option value="replevin">Writ of Replevin</option>
+      <option value="attachment">Writ of Attachment</option>
+      <option value="injunction">Writ of Injunction</option>
+    </select>
+
+    <label for="petitioner">Petitioner Name</label>
+    <input type="text" id="petitioner" name="petitioner" placeholder="Your Name or Organization">
+
+    <label for="respondent">Respondent Name</label>
+    <input type="text" id="respondent" name="respondent" placeholder="Their Name or Entity Being Sued">
+
+    <label for="cause">Cause for the Writ</label>
+    <textarea id="cause" name="cause" rows="6" placeholder="Explain the injustice, violation, or legal reason"></textarea>
+
+    <label for="governingLaw">Governing Law</label>
+    <select id="governingLaw" name="governingLaw">
+      <option value="divine">Divine Law</option>
+      <option value="natural">Natural Law</option>
+      <option value="universal">Universal Law</option>
+      <option value="common">Common Law</option>
+      <option value="constitutional">1776 U.S. Constitution</option>
+      <option value="tartarian">Tartarian Mexum Constitution</option>
+    </select>
+
+    <label for="remedy">Remedy Sought</label>
+    <textarea id="remedy" name="remedy" rows="4" placeholder="What do you want the court or system to do?"></textarea>
+
+    <button type="submit">Generate Writ Document</button>
+  </form>
+
+  <div class="footer">
+    &copy; 2025 DivineGridNetwork | Sovereign Rights Reserved
+  </div>
+
+</body>
+</html>
