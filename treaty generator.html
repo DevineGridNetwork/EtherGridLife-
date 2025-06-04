@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DivineGrid Treaty Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #ffd700;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #111;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ffd700;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #ffd700;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 14px 22px;
+      background-color: #ffd700;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ffcc00;
+    }
+
+    .note {
+      margin-top: 30px;
+      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DivineGrid Treaty Generator</h1>
+  <h2>Secure · Divine · Enforceable by Universal Law</h2>
+
+  <div class="container">
+    <form id="treatyForm">
+      <label for="treatyTitle">Treaty Title</label>
+      <input type="text" id="treatyTitle" placeholder="Treaty of Eternal Commerce">
+
+      <label for="parties">Parties Involved</label>
+      <input type="text" id="parties" placeholder="e.g., Kingdom of Tartaria, United States, Elon Musk">
+
+      <label for="jurisdiction">Jurisdiction & Authority</label>
+      <select id="jurisdiction">
+        <option>Divine Law</option>
+        <option>Natural Law</option>
+        <option>Universal Law</option>
+        <option>International Treaty Law</option>
+        <option>Tartarian Mexum Court</option>
+        <option>Constitution 1776</option>
+      </select>
+
+      <label for="terms">Treaty Terms & Provisions</label>
+      <textarea id="terms" rows="6" placeholder="List out your treaty’s terms, commitments, expectations, and provisions. Be clear."></textarea>
+
+      <label for="dateEffective">Date Effective</label>
+      <input type="date" id="dateEffective">
+
+      <label for="author">Authorized Representative</label>
+      <input type="text" id="author" placeholder="Carmelo Etienne / DivineGrid Sovereign">
+
+      <button type="button" onclick="submitTreaty()">Generate Treaty Document</button>
+    </form>
+
+    <div class="note">
+      Upon submission, your treaty is logged into the Divine Archives and may be enforced via Writ of Treaty or Covenant Decree.
+    </div>
+  </div>
+
+  <script>
+    function submitTreaty() {
+      const title = document.getElementById('treatyTitle').value.trim();
+      const parties = document.getElementById('parties').value.trim();
+      const jurisdiction = document.getElementById('jurisdiction').value;
+      const terms = document.getElementById('terms').value.trim();
+      const effective = document.getElementById('dateEffective').value;
+      const author = document.getElementById('author').value.trim();
+
+      if (!title || !parties || !terms || !effective || !author) {
+        alert("Please complete all fields.");
+        return;
+      }
+
+      alert("✅ Treaty Generated and Filed.\n" + 
+            "Title: " + title + "\n" +
+            "Jurisdiction: " + jurisdiction + "\n" +
+            "Authorized by: " + author);
+    }
+  </script>
+
+</body>
+</html>
