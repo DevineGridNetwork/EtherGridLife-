@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writ Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d3e50;
+            color: white;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="date"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #00C853;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #018F49;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2d3e50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Writ Generator</h1>
+        <p>Create a customized writ for your legal needs.</p>
+    </header>
+
+    <div class="content">
+        <h2>Fill in the details below:</h2>
+        
+        <label for="writType">Writ Type:</label>
+        <select id="writType" name="writType">
+            <option value="mandamus">Writ of Mandamus</option>
+            <option value="habeas_corpus">Writ of Habeas Corpus</option>
+            <option value="error">Writ of Error</option>
+            <option value="arrest">Writ of Arrest</option>
+            <option value="execution">Writ of Execution</option>
+        </select>
+
+        <label for="claimant">Claimant's Full Name:</label>
+        <input type="text" id="claimant" name="claimant" required>
+
+        <label for="defendant">Defendant's Full Name:</label>
+        <input type="text" id="defendant" name="defendant" required>
+
+        <label for="caseDetails">Case Details:</label>
+        <textarea id="caseDetails" name="caseDetails" rows="5" required></textarea>
+
+        <label for="dateIssued">Date of Issuance:</label>
+        <input type="date" id="dateIssued" name="dateIssued" required>
+
+        <button type="submit" onclick="generateWrit()">Generate Writ</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Divine Grid Network. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function generateWrit() {
+            const writType = document.getElementById("writType").value;
+            const claimant = document.getElementById("claimant").value;
+            const defendant = document.getElementById("defendant").value;
+            const caseDetails = document.getElementById("caseDetails").value;
+            const dateIssued = document.getElementById("dateIssued").value;
+
+            if (claimant && defendant && caseDetails && dateIssued) {
+                const writText = `
+                    Writ Type: ${writType}
+                    Claimant: ${claimant}
+                    Defendant: ${defendant}
+                    Case Details: ${caseDetails}
+                    Date of Issuance: ${dateIssued}
+                `;
+
+                alert("Writ Generated: \n\n" + writText);
+            } else {
+                alert("Please fill in all the fields.");
+            }
+        }
+    </script>
+</body>
+</html>
