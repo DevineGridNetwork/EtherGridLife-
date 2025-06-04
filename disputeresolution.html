@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dispute Resolution System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #00ffcc;
+      text-align: center;
+    }
+
+    .section {
+      background: #1c1c1c;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #666;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00ddb3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>⚖️ Dispute Resolution Portal</h1>
+  <p style="text-align:center">Resolve legal, civil, commercial, or divine disputes.</p>
+
+  <div class="section">
+    <h2>Start a New Dispute</h2>
+    <form>
+      <label for="disputeType">Dispute Type</label>
+      <select id="disputeType">
+        <option>Land/Property</option>
+        <option>Commerce/Contract</option>
+        <option>Child Custody/DNA</option>
+        <option>Government Overreach</option>
+        <option>Fraud or Identity Theft</option>
+        <option>Other</option>
+      </select>
+
+      <label for="parties">Parties Involved</label>
+      <input type="text" id="parties" placeholder="Ex: John Doe vs IRS or Jane Smith"/>
+
+      <label for="details">Dispute Description</label>
+      <textarea id="details" rows="5" placeholder="Describe what happened..."></textarea>
+
+      <label for="relief">What resolution are you seeking?</label>
+      <textarea id="relief" rows="3" placeholder="Ex: Compensation, Custody Return, Contract Void..."></textarea>
+
+      <button type="button" onclick="submitDispute()">Submit Dispute for Review</button>
+    </form>
+  </div>
+
+  <script>
+    function submitDispute() {
+      alert("✅ Dispute submitted. AI Tribunal Panel will begin automated analysis and send next steps.");
+    }
+  </script>
+
+</body>
+</html>
