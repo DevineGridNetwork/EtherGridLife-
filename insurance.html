@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Divine Insurance Portal | Jericho Coverage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00c8a0;
+    }
+
+    form {
+      background-color: #111;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 20px #00c8a0;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #222;
+      border: 1px solid #00c8a0;
+      color: white;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 14px;
+      width: 100%;
+      background-color: #00c8a0;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00a98a;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Jericho Insurance Authority</h1>
+  <h2>Life · Home · Vehicle · Divine Purpose</h2>
+
+  <form>
+    <label for="fullName">Full Legal Name</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="insuranceType">Select Insurance Type</label>
+    <select id="insuranceType" name="insuranceType">
+      <option value="life">Life Insurance</option>
+      <option value="home">Homeowners Insurance</option>
+      <option value="vehicle">Vehicle Insurance</option>
+      <option value="business">Business Coverage</option>
+      <option value="sovereign">Sovereign Divine Trust Insurance</option>
+    </select>
+
+    <label for="dob">Date of Birth (if applicable)</label>
+    <input type="date" id="dob" name="dob">
+
+    <label for="assetDetails">Asset / Property Description</label>
+    <textarea id="assetDetails" name="assetDetails" rows="4" placeholder="Describe item, vehicle, home or soul asset to be insured."></textarea>
+
+    <label for="uploadProof">Upload Document / Proof of Asset</label>
+    <input type="file" id="uploadProof" name="uploadProof" accept="image/*,.pdf,.doc,.docx">
+
+    <label for="notes">Additional Notes or Divine Claims</label>
+    <textarea id="notes" name="notes" rows="4"></textarea>
+
+    <button type="submit">Request Coverage & Assessment</button>
+  </form>
+
+  <div class="footer">
+    &copy; 2025 Divine Grid Network | Jericho Banking | All Risk Mitigation Governed by Universal Law
+  </div>
+
+</body>
+</html>
