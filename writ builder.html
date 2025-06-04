@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divine Writ Builder</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #f4f4f4;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #222;
+      border: 6px solid #00C853;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,255,150,0.2);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00C853;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #ddd;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #555;
+      background-color: #333;
+      color: #f4f4f4;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 14px;
+      font-size: 18px;
+      background-color: #00C853;
+      color: #111;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00a347;
+    }
+
+    .footer {
+      text-align: center;
+      color: #aaa;
+      margin-top: 40px;
+      font-size: 13px;
+    }
+
+    .success {
+      margin-top: 20px;
+      background-color: #1B5E20;
+      padding: 15px;
+      border-radius: 5px;
+      color: #a5d6a7;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📜 Divine Writ Builder</h1>
+    <h2>Generate & Submit Lawful Writs (Real Law, Real Action)</h2>
+
+    <label for="writType">Select Writ Type</label>
+    <select id="writType">
+      <option value="Writ of Mandamus">Writ of Mandamus</option>
+      <option value="Writ of Habeas Corpus">Writ of Habeas Corpus</option>
+      <option value="Writ of Possession">Writ of Possession</option>
+      <option value="Writ of Execution">Writ of Execution</option>
+      <option value="Writ of Error">Writ of Error</option>
+      <option value="Writ of Arrest">Writ of Arrest</option>
+      <option value="Writ of Prohibition">Writ of Prohibition</option>
+      <option value="Writ of Certiorari">Writ of Certiorari</option>
+      <option value="Writ of Replevin">Writ of Replevin</option>
+      <option value="Custom or Mixed Writ">Custom or Mixed Writ</option>
+    </select>
+
+    <label for="applicant">Applicant Name (Legal/Spiritual)</label>
+    <input type="text" id="applicant" placeholder="Your full name" />
+
+    <label for="respondent">Respondent or Target Entity</label>
+    <input type="text" id="respondent" placeholder="Court, Individual, Agency, etc." />
+
+    <label for="justification">Reason & Legal Grounds</label>
+    <textarea id="justification" rows="6" placeholder="State the injustice, law violated, and legal remedy sought. Include articles, UCC codes, or treaty violations."></textarea>
+
+    <label for="evidence">Evidence Links (Optional)</label>
+    <textarea id="evidence" rows="2" placeholder="Add links to screenshots, documents, audio, or video (e.g., Dropbox, IPFS, Google Drive)"></textarea>
+
+    <button onclick="submitWrit()">Issue Divine Writ</button>
+    <div id="successMsg" class="success">✅ Writ submitted. Awaiting judgment by the 33-AI Tribunal of Tartaria Mexum.</div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Divine Grid Network | Tribunal of Tartaria Mexum | God’s Court System
+  </div>
+
+  <script>
+    function submitWrit() {
+      const writType = document.getElementById('writType').value;
+      const applicant = document.getElementById('applicant').value;
+      const respondent = document.getElementById('respondent').value;
+      const justification = document.getElementById('justification').value;
+
+      if (!writType || !applicant || !respondent || !justification) {
+        alert('All required fields must be filled out.');
+        return;
+      }
+
+      document.getElementById('successMsg').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
