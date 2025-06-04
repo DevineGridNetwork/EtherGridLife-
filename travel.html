@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Authorization & Booking | Divine Grid Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00FFAA;
+    }
+
+    form {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00FFAA;
+    }
+
+    label {
+      margin-top: 15px;
+      display: block;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      background-color: #222;
+      border: 1px solid #00FFAA;
+      color: white;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 15px;
+      background-color: #00FFAA;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00cc88;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Divine Grid Travel Authorization</h1>
+  <h2>Book Your Travel with Sovereign Rights</h2>
+
+  <form>
+    <label for="fullName">Traveler Full Name</label>
+    <input type="text" id="fullName" name="fullName" placeholder="Your full legal or sovereign name" required>
+
+    <label for="passportType">Travel Credential Type</label>
+    <select id="passportType" name="passportType">
+      <option value="tartarian">Tartarian Passport</option>
+      <option value="birth_origin">Birth of Origin Title</option>
+      <option value="divine_id">Divine Grid Sovereign ID</option>
+    </select>
+
+    <label for="departure">Departure City / Port</label>
+    <input type="text" id="departure" name="departure" placeholder="City or port of departure" required>
+
+    <label for="destination">Destination</label>
+    <input type="text" id="destination" name="destination" placeholder="City, Region, or Country" required>
+
+    <label for="departureDate">Departure Date</label>
+    <input type="date" id="departureDate" name="departureDate" required>
+
+    <label for="returnDate">Return Date (if applicable)</label>
+    <input type="date" id="returnDate" name="returnDate">
+
+    <label for="purpose">Purpose of Travel</label>
+    <select id="purpose" name="purpose">
+      <option value="business">Business</option>
+      <option value="diplomatic">Diplomatic</option>
+      <option value="family">Family</option>
+      <option value="spiritual">Spiritual Pilgrimage</option>
+      <option value="personal">Personal Sovereign Mission</option>
+    </select>
+
+    <label for="notes">Additional Notes or Sovereign Claim</label>
+    <textarea id="notes" name="notes" rows="4" placeholder="If claiming divine immunity, attach proof of jurisdiction..."></textarea>
+
+    <button type="submit">Submit Travel Request</button>
+  </form>
+
+  <div class="footer">
+    &copy; 2025 Divine Grid Network | Sovereign Travel Registry
+  </div>
+
+</body>
+</html>
