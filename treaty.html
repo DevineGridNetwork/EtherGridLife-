@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Treaty Generator | Divine Grid Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00FFAA;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00FFAA;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #222;
+      border: 1px solid #00FFAA;
+      color: white;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #00FFAA;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #00cc88;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Divine Treaty Generator</h1>
+  <h2>Create Private, Public & Interdimensional Treaties</h2>
+
+  <form>
+    <label for="treatyType">Treaty Type</label>
+    <select id="treatyType" name="treatyType">
+      <option value="private">Private Treaty</option>
+      <option value="public">Public Treaty</option>
+      <option value="sovereign">Sovereign State Treaty</option>
+      <option value="cosmic">Cosmic/Interdimensional Treaty</option>
+    </select>
+
+    <label for="partyOne">Party One (Name or Entity)</label>
+    <input type="text" id="partyOne" name="partyOne">
+
+    <label for="partyTwo">Party Two (Name or Entity)</label>
+    <input type="text" id="partyTwo" name="partyTwo">
+
+    <label for="terms">Treaty Terms & Conditions</label>
+    <textarea id="terms" name="terms" rows="8" placeholder="Enter treaty clauses, benefits, obligations, and enforcement terms."></textarea>
+
+    <label for="effectiveDate">Effective Date</label>
+    <input type="date" id="effectiveDate" name="effectiveDate">
+
+    <label for="duration">Duration (e.g., Indefinite, 7 years)</label>
+    <input type="text" id="duration" name="duration">
+
+    <label for="governingLaw">Governing Law</label>
+    <select id="governingLaw" name="governingLaw">
+      <option value="divine">Divine Law</option>
+      <option value="natural">Natural Law</option>
+      <option value="universal">Universal Law</option>
+      <option value="common">Common Law</option>
+      <option value="constitutional">1776 Constitution</option>
+      <option value="tartarian">Tartarian Mexum Constitution</option>
+    </select>
+
+    <button type="submit">Generate Treaty PDF / JSON</button>
+  </form>
+
+  <div class="footer">
+    &copy; 2025 DivineGridNetwork | All Rights Reserved
+  </div>
+
+</body>
+</html>
