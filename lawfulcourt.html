@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lawful Court Filing Interface</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #FFD700;
+    }
+    form {
+      max-width: 700px;
+      margin: auto;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #FFD700;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background: #222;
+      color: #fff;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #FFD700;
+      color: #000;
+      padding: 12px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e6c200;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Divine Court Filing Interface</h1>
+  <form id="courtForm">
+    <label for="filingType">Filing Type</label>
+    <select id="filingType" required>
+      <option value="">Select type</option>
+      <option value="Writ">Writ</option>
+      <option value="Treaty">Treaty</option>
+      <option value="Trust Claim">Trust Claim</option>
+      <option value="Lien Filing">Lien Filing</option>
+      <option value="UCC Claim">UCC Claim</option>
+      <option value="Injunction or Stay">Injunction or Stay</option>
+    </select>
+
+    <label for="fullName">Filing Party Name</label>
+    <input type="text" id="fullName" placeholder="Full legal name or Trust name" required />
+
+    <label for="filingDetails">Filing Details</label>
+    <textarea id="filingDetails" rows="6" placeholder="Explain your case, claim, or issue..." required></textarea>
+
+    <label for="evidenceLinks">Evidence or Supporting Docs (URLs or references)</label>
+    <textarea id="evidenceLinks" rows="3" placeholder="Paste any public links to documents or evidence here..."></textarea>
+
+    <label for="filingDate">Date of Filing</label>
+    <input type="date" id="filingDate" required />
+
+    <button type="submit">Submit to Divine Court</button>
+  </form>
+
+  <div class="footer">
+    Divine Grid Network © 2025 — Supreme Court of Tartaria Mexum
+  </div>
+
+  <script>
+    document.getElementById("courtForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const type = document.getElementById("filingType").value;
+      const name = document.getElementById("fullName").value;
+      const details = document.getElementById("filingDetails").value;
+      const evidence = document.getElementById("evidenceLinks").value;
+      const date = document.getElementById("filingDate").value;
+
+      const documentContent = `
+        <h2>${type} Submission</h2>
+        <p><strong>Submitted By:</strong> ${name}</p>
+        <p><strong>Date of Filing:</strong> ${date}</p>
+        <p><strong>Details:</strong><br/>${details}</p>
+        <p><strong>Evidence/Attachments:</strong><br/>${evidence}</p>
+        <hr/>
+        <p>This document is filed under the Kingdom of God, Tartaria Mexum, and Divine Grid Network, under the authority of Universal Law, Natural Law, and Common Law. This submission is binding, enforceable, and may not be ignored by any court of lesser authority.</p>
+        <p>Non-negotiable. Done and ordered: ${date}.</p>
+      `;
+
+      const printWin = window.open("", "_blank");
+      printWin.document.write("<html><head><title>Filing Record</title></head><body style='background:#000;color:#fff;padding:20px;font-family:Arial'>" + documentContent + "</body></html>");
+    });
+  </script>
+</body>
+</html>
