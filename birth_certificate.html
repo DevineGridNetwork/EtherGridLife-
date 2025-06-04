@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tartarian Birth Certificate | Divine Grid Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00FFAA;
+    }
+
+    form {
+      background-color: #111;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 20px #00FFAA;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #222;
+      border: 1px solid #00FFAA;
+      color: white;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 14px;
+      width: 100%;
+      background-color: #00FFAA;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00cc88;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Register Birth of Origin</h1>
+  <h2>Tartarian Birth Certificate • Divine Record of Lineage</h2>
+
+  <form>
+    <label for="childName">Full Name of Child</label>
+    <input type="text" id="childName" name="childName" required>
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="birthplace">Place of Origin (Realm / Nation / City)</label>
+    <input type="text" id="birthplace" name="birthplace" required>
+
+    <label for="parents">Parent(s) or Guardian(s)</label>
+    <input type="text" id="parents" name="parents" placeholder="Full names separated by commas" required>
+
+    <label for="witness">Witness to Birth</label>
+    <input type="text" id="witness" name="witness" placeholder="Optional">
+
+    <label for="idphoto">Upload Baby Photo / Proof</label>
+    <input type="file" id="idphoto" name="idphoto" accept="image/*">
+
+    <label for="notes">Special Remarks or Lineage Declaration</label>
+    <textarea id="notes" name="notes" rows="4" placeholder="Royal lineage, soul history, divine claim, etc."></textarea>
+
+    <button type="submit">Submit Registration</button>
+  </form>
+
+  <div class="footer">
+    &copy; 2025 Divine Grid Network · Births Recorded Under Divine, Universal, Natural, and Tartarian Law
+  </div>
+
+</body>
+</html>
