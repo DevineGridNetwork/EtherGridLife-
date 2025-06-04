@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curriculum Builder</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #F4F4F4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border: 10px solid #1B3A4B;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1B3A4B;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #00C853;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #019F49;
+    }
+
+    .output {
+      background-color: #fefefe;
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px dashed #000;
+      border-radius: 5px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #888;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Curriculum Builder</h1>
+
+    <div class="form-group">
+      <label for="programName">Program Name</label>
+      <input type="text" id="programName" placeholder="e.g. Natural Law 101, Financial Literacy, Galactic Science">
+    </div>
+
+    <div class="form-group">
+      <label for="level">Education Level</label>
+      <select id="level">
+        <option value="Primary">Primary</option>
+        <option value="Secondary">Secondary</option>
+        <option value="Higher Learning">Higher Learning</option>
+        <option value="Divine Seminary">Divine Seminary</option>
+        <option value="Interdimensional Studies">Interdimensional Studies</option>
+        <option value="Private Estate School">Private Estate School</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="modules">List of Modules or Topics (separate with commas)</label>
+      <textarea id="modules" rows="4" placeholder="e.g. Natural Law, Universal Commerce, Sovereignty, Trust Law, Quantum Consciousness"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="duration">Total Duration (Weeks or Months)</label>
+      <input type="text" id="duration" placeholder="e.g. 12 weeks, 6 months">
+    </div>
+
+    <div class="form-group">
+      <label for="outcome">Expected Outcome / Certification</label>
+      <input type="text" id="outcome" placeholder="e.g. Certified Estate Sovereign, Divine Law Graduate">
+    </div>
+
+    <button onclick="generateCurriculum()">Generate Curriculum</button>
+
+    <div class="output" id="output" style="display: none;">
+      <h2>Curriculum Plan</h2>
+      <p><strong>Program:</strong> <span id="outProgram"></span></p>
+      <p><strong>Level:</strong> <span id="outLevel"></span></p>
+      <p><strong>Duration:</strong> <span id="outDuration"></span></p>
+      <p><strong>Certification:</strong> <span id="outOutcome"></span></p>
+      <p><strong>Modules:</strong></p>
+      <ul id="outModules"></ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Divine Grid Network | Tartaria Mexum Education & Licensing
+  </div>
+
+  <script>
+    function generateCurriculum() {
+      const name = document.getElementById('programName').value;
+      const level = document.getElementById('level').value;
+      const modules = document.getElementById('modules').value.split(',');
+      const duration = document.getElementById('duration').value;
+      const outcome = document.getElementById('outcome').value;
+
+      if (!name || !level || !modules || !duration || !outcome) {
+        alert("Please fill out all fields.");
+        return;
+      }
+
+      document.getElementById('outProgram').innerText = name;
+      document.getElementById('outLevel').innerText = level;
+      document.getElementById('outDuration').innerText = duration;
+      document.getElementById('outOutcome').innerText = outcome;
+
+      const modulesList = document.getElementById('outModules');
+      modulesList.innerHTML = "";
+      modules.forEach(mod => {
+        const li = document.createElement('li');
+        li.textContent = mod.trim();
+        modulesList.appendChild(li);
+      });
+
+      document.getElementById('output').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
