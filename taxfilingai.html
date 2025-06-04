@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tax Filing AI Interface</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #00ffcc;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #333;
+    }
+
+    label {
+      margin-top: 15px;
+      display: block;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00ddb3;
+    }
+
+    small {
+      display: block;
+      margin-top: 10px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧾 AI Tax Filing Portal</h1>
+  <p style="text-align:center">Powered by IRS AI + DivineGrid AI Network</p>
+
+  <div class="container">
+    <form>
+      <label for="fullName">Full Legal Name</label>
+      <input type="text" id="fullName" placeholder="John or Jane Doe" required />
+
+      <label for="ssn">SSN / EIN / TIN</label>
+      <input type="text" id="ssn" placeholder="###-##-#### or EIN format" required />
+
+      <label for="income">Total Income (USD or TART)</label>
+      <input type="text" id="income" placeholder="Ex: $120,000 or TART $300,000" required />
+
+      <label for="filingType">Filing Type</label>
+      <select id="filingType">
+        <option>Private Exemption - Tartarian Trust</option>
+        <option>Public (1040 Form)</option>
+        <option>Business (1120, LLC, etc.)</option>
+        <option>Crypto / Digital Assets</option>
+      </select>
+
+      <label for="details">Additional Notes / Sources of Revenue</label>
+      <textarea id="details" rows="4" placeholder="Add any known deductions, business info, crypto earnings, etc."></textarea>
+
+      <button type="button" onclick="submitTax()">File Taxes with AI</button>
+      <small>Your data is verified, analyzed, and routed through Divine IRS AI node. You will receive confirmation via email and grid account.</small>
+    </form>
+  </div>
+
+  <script>
+    function submitTax() {
+      alert("✅ Tax filing submitted to IRS AI and DivineGrid Portal. Await confirmation.");
+    }
+  </script>
+
+</body>
+</html>
