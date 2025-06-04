@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Treaty Builder - Divine Grid Network</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #00FFAA;
+      text-align: center;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: #111;
+      padding: 20px;
+      border: 2px solid #00FFAA;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #00FFAA;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00dd99;
+    }
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Divine Treaty Builder</h1>
+  <form id="treatyForm">
+    <label for="treatyTitle">Treaty Title</label>
+    <input type="text" id="treatyTitle" name="treatyTitle" placeholder="Enter treaty title" required />
+
+    <label for="partiesInvolved">Parties Involved</label>
+    <textarea id="partiesInvolved" name="partiesInvolved" placeholder="Enter the names of parties involved" required></textarea>
+
+    <label for="treatyType">Treaty Type</label>
+    <select id="treatyType" name="treatyType" required>
+      <option value="">Select Type</option>
+      <option value="Government">Government</option>
+      <option value="Private Entity">Private Entity</option>
+      <option value="Spiritual Accord">Spiritual Accord</option>
+      <option value="Territorial Claim">Territorial Claim</option>
+      <option value="Financial Agreement">Financial Agreement</option>
+    </select>
+
+    <label for="terms">Terms & Conditions</label>
+    <textarea id="terms" name="terms" placeholder="Enter the full terms of the treaty" rows="10" required></textarea>
+
+    <label for="effectiveDate">Effective Date</label>
+    <input type="date" id="effectiveDate" name="effectiveDate" required />
+
+    <button type="submit">Generate Treaty</button>
+  </form>
+
+  <div class="footer">
+    Divine Grid Network &copy; 2025 - All rights reserved. Treaty Builder v1.0
+  </div>
+
+  <script>
+    document.getElementById("treatyForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const title = document.getElementById("treatyTitle").value;
+      const parties = document.getElementById("partiesInvolved").value;
+      const type = document.getElementById("treatyType").value;
+      const terms = document.getElementById("terms").value;
+      const date = document.getElementById("effectiveDate").value;
+
+      const treaty = `
+        <h2>${title}</h2>
+        <p><strong>Parties Involved:</strong> ${parties}</p>
+        <p><strong>Treaty Type:</strong> ${type}</p>
+        <p><strong>Terms:</strong></p>
+        <p>${terms}</p>
+        <p><strong>Effective Date:</strong> ${date}</p>
+        <hr/>
+        <p>This treaty is binding under Divine Law, Universal Law, Natural Law, and Common Law.</p>
+      `;
+      
+      const treatyWindow = window.open("", "_blank");
+      treatyWindow.document.write("<html><head><title>Generated Treaty</title></head><body style='font-family:Arial;background:#000;color:#fff;padding:20px;'>" + treaty + "</body></html>");
+    });
+  </script>
+</body>
+</html>
