@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificate Creator</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      background: #ffffff;
+      border: 10px solid #1B3A4B;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #1B3A4B;
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin: 20px 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px 25px;
+      background-color: #00C853;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #018F49;
+    }
+
+    .certificate-output {
+      margin-top: 30px;
+      background-color: #fdfdfd;
+      padding: 20px;
+      border: 1px dashed #333;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Create a Certificate</h1>
+    <div class="form-group">
+      <label for="name">Recipient Full Name</label>
+      <input type="text" id="name" placeholder="Enter full name">
+    </div>
+
+    <div class="form-group">
+      <label for="type">Certificate Type</label>
+      <select id="type">
+        <option value="Certificate of Completion">Certificate of Completion</option>
+        <option value="Certificate of Achievement">Certificate of Achievement</option>
+        <option value="Honorary Degree">Honorary Degree</option>
+        <option value="Title of Nobility">Title of Nobility</option>
+        <option value="Private Estate Certificate">Private Estate Certificate</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="reason">Reason / Description</label>
+      <textarea id="reason" rows="4" placeholder="Describe the reason for this certificate..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date of Issuance</label>
+      <input type="date" id="date" />
+    </div>
+
+    <button onclick="generateCertificate()">Generate Certificate</button>
+
+    <div class="certificate-output" id="output" style="display: none;">
+      <h2>Certificate Preview</h2>
+      <p><strong>Type:</strong> <span id="outType"></span></p>
+      <p><strong>Recipient:</strong> <span id="outName"></span></p>
+      <p><strong>Description:</strong> <span id="outReason"></span></p>
+      <p><strong>Date:</strong> <span id="outDate"></span></p>
+      <p><strong>Issuer:</strong> Divine Grid Network | Tartaria Mexum | The Almighty Trust</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Divine Grid Network. All Rights Reserved.
+  </div>
+
+  <script>
+    function generateCertificate() {
+      const name = document.getElementById("name").value;
+      const type = document.getElementById("type").value;
+      const reason = document.getElementById("reason").value;
+      const date = document.getElementById("date").value;
+
+      if (!name || !type || !reason || !date) {
+        alert("Please complete all fields.");
+        return;
+      }
+
+      document.getElementById("outName").innerText = name;
+      document.getElementById("outType").innerText = type;
+      document.getElementById("outReason").innerText = reason;
+      document.getElementById("outDate").innerText = date;
+      document.getElementById("output").style.display = "block";
+    }
+  </script>
+</body>
+</html>
