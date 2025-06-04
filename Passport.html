@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Apply for Tartarian Passport | Divine Grid Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00FFAA;
+    }
+
+    form {
+      background-color: #111;
+      max-width: 800px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00FFAA;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      background-color: #222;
+      border: 1px solid #00FFAA;
+      color: white;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 25px;
+      background-color: #00FFAA;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00cc88;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tartarian Passport Application</h1>
+  <h2>Issued under the Divine Grid Network</h2>
+
+  <form>
+    <label for="fullname">Full Sovereign Name</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Ex: Carmelo Etienne, Divine Man" required>
+
+    <label for="birthTitle">Birth of Origin Title (Certificate)</label>
+    <input type="text" id="birthTitle" name="birthTitle" placeholder="Issued title of origin" required>
+
+    <label for="nation">Nation of Claim</label>
+    <input type="text" id="nation" name="nation" value="Tartaria Mexum" readonly>
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="idtype">ID Linked</label>
+    <select id="idtype" name="idtype">
+      <option value="divineid">Divine Grid Sovereign ID</option>
+      <option value="none">None Yet</option>
+    </select>
+
+    <label for="photoUpload">Passport Photo Upload</label>
+    <input type="file" id="photoUpload" accept="image/*">
+
+    <label for="notes">Notes / Sovereign Remarks</label>
+    <textarea id="notes" name="notes" rows="5" placeholder="Jurisdictional declarations, immunity, status..."></textarea>
+
+    <button type="submit">Request Passport</button>
+  </form>
+
+  <div class="footer">
+    &copy; 2025 Divine Grid Network | Tartarian Identification Authority
+  </div>
+
+</body>
+</html>
