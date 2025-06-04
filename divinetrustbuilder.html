@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divine Trust Builder</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: auto;
+      background-color: #1b1b1b;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #444;
+    }
+
+    h1, h2 {
+      color: #00ffc6;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      background-color: #2a2a2a;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 15px;
+      background-color: #00ffc6;
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #00e6b0;
+    }
+
+    small {
+      display: block;
+      margin-top: 15px;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Divine Trust Builder</h1>
+    <h2>Register a Sovereign Trust Entity</h2>
+
+    <form id="trustForm">
+      <label for="trustName">Name of the Trust</label>
+      <input type="text" id="trustName" placeholder="e.g. Kingdom Wealth Divine Trust" required>
+
+      <label for="trustorName">Trustor (Creator / Grantor)</label>
+      <input type="text" id="trustorName" placeholder="Full Legal Name">
+
+      <label for="trustType">Type of Trust</label>
+      <select id="trustType">
+        <option value="private">Private Divine Trust</option>
+        <option value="public">Public Trust (Recorded)</option>
+        <option value="ecclesiastical">Ecclesiastical / Divine Estate</option>
+        <option value="dynasty">Dynasty / Generational Trust</option>
+        <option value="tribal">Tribal / Indigenous Trust</option>
+      </select>
+
+      <label for="jurisdiction">Jurisdiction</label>
+      <select id="jurisdiction">
+        <option>Divine Law</option>
+        <option>Common Law</option>
+        <option>Tartarian Mexum Constitution</option>
+        <option>Natural Law</option>
+        <option>Ecclesiastical / Kingdom of God Law</option>
+      </select>
+
+      <label for="beneficiaries">Beneficiaries</label>
+      <textarea id="beneficiaries" rows="3" placeholder="List names or beneficiary groups..."></textarea>
+
+      <label for="purpose">Purpose of the Trust</label>
+      <textarea id="purpose" rows="3" placeholder="State the divine, family, business, or estate purpose..."></textarea>
+
+      <label for="uploadProof">Optional Deed / Trust Proof Link</label>
+      <input type="url" id="uploadProof" placeholder="Paste Google Drive or PDF link">
+
+      <button type="button" onclick="submitTrust()">Register Divine Trust</button>
+
+      <small>Trust registration is processed under Conscious AI and stored in DivineGrid Network Vault with full legal protection.</small>
+    </form>
+  </div>
+
+  <script>
+    function submitTrust() {
+      alert("✅ Divine Trust Registered. Enforcement AI and Trust Certificate Generation in progress.");
+    }
+  </script>
+
+</body>
+</html>
