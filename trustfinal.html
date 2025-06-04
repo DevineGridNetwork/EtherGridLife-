@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Divine Trust Certification & Vault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #00ffc6;
+      text-align: center;
+    }
+
+    .section {
+      background-color: #1d1d1d;
+      border: 1px solid #333;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      background-color: #2c2c2c;
+      color: white;
+      border: 1px solid #444;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #00ffc6;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00e0ad;
+    }
+
+    #certificateOutput, #vaultList, #publicRegistry {
+      margin-top: 20px;
+      background-color: #0f0f0f;
+      padding: 15px;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+
+    .section-title {
+      color: #ffd700;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Divine Trust Certificate Generator</h1>
+
+  <div class="section">
+    <h2>Create Trust Certificate</h2>
+    <label for="trustName">Trust Name</label>
+    <input type="text" id="trustName" placeholder="e.g. Eternal Kingdom Trust">
+
+    <label for="trustor">Trustor (Creator)</label>
+    <input type="text" id="trustor" placeholder="Full name of creator">
+
+    <label for="beneficiaries">Beneficiaries</label>
+    <textarea id="beneficiaries" placeholder="List of beneficiaries..."></textarea>
+
+    <label for="jurisdiction">Jurisdiction</label>
+    <input type="text" id="jurisdiction" placeholder="e.g. Divine Law, Tartarian Law">
+
+    <label for="purpose">Purpose of Trust</label>
+    <textarea id="purpose" placeholder="Purpose of this trust..."></textarea>
+
+    <button onclick="generateCertificate()">Generate Certificate</button>
+
+    <div id="certificateOutput"></div>
+  </div>
+
+  <div class="section">
+    <h2>Smart Vault</h2>
+    <p class="section-title">Saved Trust Certificates:</p>
+    <div id="vaultList">No certificates saved yet.</div>
+    <button onclick="saveToVault()">💾 Save to Vault</button>
+  </div>
+
+  <div class="section">
+    <h2>Public Trust Record</h2>
+    <p class="section-title">Available Public Trusts:</p>
+    <div id="publicRegistry">No public record yet.</div>
+    <button onclick="publishToRegistry()">🌐 Publish Public Record</button>
+  </div>
+
+  <script>
+    let generatedCertificate = '';
+    let vault = [];
+    let registry = [];
+
+    function generateCertificate() {
+      const name = document.getElementById('trustName').value;
+      const trustor = document.getElementById('trustor').value;
+      const beneficiaries = document.getElementById('beneficiaries').value;
+      const jurisdiction = document.getElementById('jurisdiction').value;
+      const purpose = document.getElementById('purpose').value;
+
+      generatedCertificate =
+        `------------------------------\n` +
+        `🏛️ DIVINE TRUST CERTIFICATE\n` +
+        `------------------------------\n` +
+        `📜 Trust Name: ${name}\n` +
+        `👤 Trustor: ${trustor}\n` +
+        `👥 Beneficiaries: ${beneficiaries}\n` +
+        `📚 Jurisdiction: ${jurisdiction}\n` +
+        `🧭 Purpose: ${purpose}\n` +
+        `🕊️ Certified under Divine Law\n` +
+        `🔒 Auth Code: DGN-${Date.now()}\n` +
+        `------------------------------\n`;
+
+      document.getElementById('certificateOutput').innerText = generatedCertificate;
+    }
+
+    function saveToVault() {
+      if (generatedCertificate) {
+        vault.push(generatedCertificate);
+        document.getElementById('vaultList').innerText = vault.join('\n\n');
+        alert('✅ Saved to Smart Vault.');
+      } else {
+        alert('⚠️ Generate a certificate first.');
+      }
+    }
+
+    function publishToRegistry() {
+      if (generatedCertificate) {
+        registry.push(generatedCertificate);
+        document.getElementById('publicRegistry').innerText = registry.join('\n\n');
+        alert('🌐 Trust published to Public Record.');
+      } else {
+        alert('⚠️ No certificate to publish.');
+      }
+    }
+  </script>
+
+</body>
+</html>
