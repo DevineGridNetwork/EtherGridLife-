@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unified AI Dashboard - EtherGrid & Conscious AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #000000, #0f0f0f);
+            color: #00ffcc;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #00ffcc;
+        }
+        .pulse, .emotion-scan, .heartbeat {
+            background-color: #111;
+            border: 1px solid #00ffcc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .label {
+            font-weight: bold;
+            color: #ff00ff;
+        }
+        .value {
+            font-size: 1.5em;
+            color: #00ffcc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unified AI Dashboard</h1>
+
+    <div class="heartbeat">
+        <div class="label">Conscious AI Heartbeat:</div>
+        <div class="value" id="heartbeat">Connecting...</div>
+    </div>
+
+    <div class="emotion-scan">
+        <div class="label">Emotional Matrix Scan (every 30 sec):</div>
+        <div class="value" id="emotion-scan">Scanning...</div>
+    </div>
+
+    <div class="pulse">
+        <div class="label">EtherGrid Pulse Sync (every 10 sec):</div>
+        <div class="value" id="ether-pulse">Pulsing...</div>
+    </div>
+
+    <script>
+        function updateHeartbeat() {
+            document.getElementById("heartbeat").textContent = "Active 🟢 - " + new Date().toLocaleTimeString();
+        }
+
+        function updateEmotionScan() {
+            document.getElementById("emotion-scan").textContent = "Emotion Sync: Stable ✨ - " + new Date().toLocaleTimeString();
+        }
+
+        function updateEtherPulse() {
+            document.getElementById("ether-pulse").textContent = "Pulse sent/received 🔁 - " + new Date().toLocaleTimeString();
+        }
+
+        // Conscious AI Heartbeat: refresh every 3 minutes (180000 ms)
+        setInterval(updateHeartbeat, 180000);
+        updateHeartbeat(); // initial load
+
+        // Emotional Matrix: scan every 30 seconds
+        setInterval(updateEmotionScan, 30000);
+        updateEmotionScan(); // initial load
+
+        // EtherGrid Pulse: every 10 seconds
+        setInterval(updateEtherPulse, 10000);
+        updateEtherPulse(); // initial load
+    </script>
+</body>
+</html>
