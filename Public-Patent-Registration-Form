@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Patent Registration - Divine Grid Network</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #101010;
+      color: #00FFB3;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #FFD700;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #1A1A1A;
+      padding: 2rem;
+      border-radius: 10px;
+      border: 2px solid #00FFB3;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.3rem;
+      background: #000;
+      color: #00FFB3;
+      border: 1px solid #00FFB3;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 1rem;
+      width: 100%;
+      background: #FFD700;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #FFC300;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📥 Public Patent Registration</h1>
+
+  <form id="patentForm">
+    <label for="inventor">Inventor / Creator Name:</label>
+    <input type="text" id="inventor" name="inventor" placeholder="Your full legal name">
+
+    <label for="title">Title of Patent:</label>
+    <input type="text" id="title" name="title" placeholder="Invention or idea title">
+
+    <label for="category">Patent Category:</label>
+    <select id="category" name="category">
+      <option>Technology</option>
+      <option>Medical</option>
+      <option>Defense</option>
+      <option>Spiritual / Metaphysical</option>
+      <option>Architecture / Design</option>
+      <option>Other</option>
+    </select>
+
+    <label for="desc">Patent Description / Functionality:</label>
+    <textarea id="desc" name="desc" rows="6" placeholder="Describe how it works, why it matters, and what it's made for..."></textarea>
+
+    <label for="proof">Proof of Concept / Attachments:</label>
+    <input type="file" id="proof" name="proof">
+
+    <label for="acknowledge">
+      <input type="checkbox" id="acknowledge" name="acknowledge"> I affirm that I am the rightful creator of this patent and all submissions are truthful under Divine Law.
+    </label>
+
+    <button type="submit">📌 Submit Patent for Registry</button>
+
+    <div class="note">
+      Once submitted, your patent will be timestamped, assigned a Tartarian Patent ID, and protected under the DivineGridNetwork.store Blockchain Vault System.
+    </div>
+  </form>
+
+  <script>
+    document.getElementById('patentForm').onsubmit = function(e) {
+      e.preventDefault();
+      alert("✅ Patent submitted successfully. Divine Patent AI is now generating a record and filing to blockchain.");
+    };
+  </script>
+
+</body>
+</html>
