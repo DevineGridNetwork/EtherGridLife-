@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DivineGrid Private Stock Market Exchange</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #00ffcc;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #ffffff;
+    }
+    form {
+      background: #111;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    label, input, button {
+      display: block;
+      margin: 10px 0;
+    }
+    input, button {
+      padding: 8px;
+      width: 100%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #111;
+      color: #ffffff;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #222;
+    }
+    .add-stock-btn {
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    .add-stock-btn:hover {
+      background-color: #00e6b8;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      text-align: center;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DivineGrid Private Stock Exchange</h1>
+  <h2>Upload Securities, EIN Listings, Tickers, IPs</h2>
+
+  <form id="stockForm">
+    <label for="stockName">Stock / Patent Name:</label>
+    <input type="text" id="stockName" required />
+
+    <label for="symbol">Ticker Symbol (4-5 letters):</label>
+    <input type="text" id="symbol" maxlength="5" required />
+
+    <label for="ein">Linked EIN or IP/Patent:</label>
+    <input type="text" id="ein" value="83-6828366" required />
+
+    <label for="initialPrice">Initial Offering Price ($):</label>
+    <input type="number" id="initialPrice" step="0.01" required />
+
+    <button type="submit" class="add-stock-btn">Upload Listing</button>
+  </form>
+
+  <table id="stockTable">
+    <thead>
+      <tr>
+        <th>Stock/Patent</th>
+        <th>Ticker</th>
+        <th>EIN / IP</th>
+        <th>Price</th>
+        <th>Time Listed</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <footer>
+    DivineGridNetwork.store | EtherGrid | Tartaria.Mexum | US Patent & Trust | AI-powered valuation on refresh
+  </footer>
+
+  <script>
+    const form = document.getElementById('stockForm');
+    const tableBody = document.querySelector('#stockTable tbody');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('stockName').value;
+      const symbol = document.getElementById('symbol').value.toUpperCase();
+      const ein = document.getElementById('ein').value;
+      const price = parseFloat(document.getElementById('initialPrice').value).toFixed(2);
+      const time = new Date().toLocaleString();
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${name}</td>
+        <td>${symbol}</td>
+        <td>${ein}</td>
+        <td>$${price}</td>
+        <td>${time}</td>
+      `;
+
+      tableBody.appendChild(row);
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
