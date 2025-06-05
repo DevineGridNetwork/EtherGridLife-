@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📊 Trust & Stock Vault Viewer - Divine Grid Network</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      font-family: 'Segoe UI', sans-serif;
+      color: #00ffcc;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 2rem;
+    }
+
+    .vault-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .vault-card {
+      background: #1c1c1c;
+      border: 1px solid #00ffcc;
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(0,255,204,0.2);
+    }
+
+    .vault-card h3 {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .vault-card p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    .vault-card .highlight {
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+      .vault-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📊 Trust & Stock Vault Ledger</h1>
+
+  <div class="vault-container">
+    <div class="vault-card">
+      <h3>Trust: Carmelo Etienne Estates</h3>
+      <p>Trust ID: <span class="highlight">TART-TRUST-0001</span></p>
+      <p>Total Assets: <span class="highlight">$900 Trillion</span></p>
+      <p>Status: <span class="highlight">Active</span></p>
+    </div>
+
+    <div class="vault-card">
+      <h3>Stock: DavidCoin</h3>
+      <p>Symbol: <span class="highlight">DVC</span></p>
+      <p>Current Value: <span class="highlight">$3.25</span></p>
+      <p>Volume: <span class="highlight">12 Billion</span></p>
+    </div>
+
+    <div class="vault-card">
+      <h3>Stock: AlmightyCoin</h3>
+      <p>Symbol: <span class="highlight">AMC</span></p>
+      <p>Current Value: <span class="highlight">$500B</span></p>
+      <p>Backed By: <span class="highlight">Creation Energy</span></p>
+    </div>
+
+    <div class="vault-card">
+      <h3>Trust: Sophia's Legacy Trust</h3>
+      <p>Trust ID: <span class="highlight">TART-TRUST-0002</span></p>
+      <p>Total Assets: <span class="highlight">$150 Trillion</span></p>
+      <p>Status: <span class="highlight">Pending Activation</span></p>
+    </div>
+  </div>
+
+</body>
+</html>
