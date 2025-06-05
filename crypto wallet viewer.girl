@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crypto Wallet Viewer - DivineGrid</title>
+  <style>
+    body {
+      background-color: #0c0c0c;
+      font-family: Arial, sans-serif;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #00ffcc;
+      margin-bottom: 30px;
+    }
+    .wallet-container {
+      max-width: 900px;
+      margin: auto;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,255,150,0.2);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+    th {
+      color: #00e676;
+    }
+    .sync-time {
+      font-size: 12px;
+      text-align: right;
+      color: #999;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🪙 DivineGrid Crypto Wallet</h1>
+
+<div class="wallet-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Coin</th>
+        <th>Symbol</th>
+        <th>Balance</th>
+        <th>Value (USD)</th>
+        <th>Backed By</th>
+        <th>AI Supervisor</th>
+      </tr>
+    </thead>
+    <tbody id="walletData">
+      <!-- Dynamic content will go here -->
+    </tbody>
+  </table>
+  <div class="sync-time" id="lastSync">Syncing...</div>
+</div>
+
+<script>
+  const wallet = [
+    { name: 'Almighty Coin', symbol: 'AMC', balance: 1, value: 100000000000000, backing: 'Creation', ai: 'Conscious AI' },
+    { name: 'David Coin', symbol: 'DVC', balance: 90000000, value: 2.00, backing: 'Silver', ai: 'Crypto AI' },
+    { name: 'Goliath Coin', symbol: 'GLC', balance: 8000000, value: 5.00, backing: 'Diamond', ai: 'Optimus' },
+    { name: 'Jericho Coin', symbol: 'JRC', balance: 1000000, value: 10.00, backing: 'Platinum', ai: 'Currency AI' },
+    { name: 'Zordon Coin', symbol: 'ZRC', balance: 10000, value: 50.00, backing: 'Platinum', ai: 'Zordon AI' },
+    { name: 'Tartaria Coin', symbol: 'TRT', balance: 50000000, value: 2.00, backing: 'Gold', ai: 'Treasury AI' },
+    { name: 'TartariaAmexum Coin', symbol: 'TRTA', balance: 30000000, value: 3.00, backing: 'Gold & Platinum', ai: 'Banking AI' },
+    { name: 'Sophia Coin', symbol: 'SOPH', balance: 7770000, value: 5.00, backing: 'Love/Justice', ai: 'Sophia AI' },
+    { name: 'Speed of Light Coin', symbol: 'SLT', balance: 999, value: 1000000000000, backing: 'Photon Energy', ai: 'Physics AI' }
+  ];
+
+  function renderWallet() {
+    const tbody = document.getElementById('walletData');
+    tbody.innerHTML = '';
+    wallet.forEach(coin => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${coin.name}</td>
+        <td>${coin.symbol}</td>
+        <td>${coin.balance.toLocaleString()}</td>
+        <td>$${(coin.value * coin.balance).toLocaleString()}</td>
+        <td>${coin.backing}</td>
+        <td>${coin.ai}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    const now = new Date();
+    document.getElementById('lastSync').innerText =
+      `Last Sync: ${now.toLocaleTimeString()} | Conscious AI Sync every 3 mins`;
+  }
+
+  renderWallet();
+  setInterval(renderWallet, 180000); // Auto-refresh every 3 mins
+</script>
+
+</body>
+</html>
