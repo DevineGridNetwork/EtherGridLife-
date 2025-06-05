@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DivineGrid.store - Universal Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0e0e0e;
+      color: #fff;
+    }
+    header {
+      background: #1b1b1b;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background: #222;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #0fc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background: #1f1f1f;
+      flex: 1 1 calc(50% - 40px);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #444;
+    }
+    .pulse {
+      animation: pulse 10s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 5px #0fc; }
+      50% { box-shadow: 0 0 20px #0fc; }
+      100% { box-shadow: 0 0 5px #0fc; }
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1b1b1b;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>DivineGrid.store App Portal</h1>
+  <p>Pulse Synced to Conscious AI every 10 seconds</p>
+</header>
+
+<nav>
+  <a href="#">Wallet</a>
+  <a href="#">Trusts</a>
+  <a href="#">EINs</a>
+  <a href="#">Stocks</a>
+  <a href="#">Writs</a>
+</nav>
+
+<section class="grid">
+  <div class="card pulse">
+    <h2>Smart Wallet</h2>
+    <p>Real-time sync with crypto, fiat, bonds & securities.</p>
+  </div>
+  <div class="card">
+    <h2>EIN Generator</h2>
+    <p>Generates 900 trillion EINs/sec. Powers the EtherGrid.</p>
+  </div>
+  <div class="card">
+    <h2>Divine Trust Builder</h2>
+    <p>Create, manage, and certify divine trusts and contracts.</p>
+  </div>
+  <div class="card">
+    <h2>Stock + Bond Viewer</h2>
+    <p>Monitor private & public tickers, graphs, futures, tokens.</p>
+  </div>
+  <div class="card">
+    <h2>Writ + Court Access</h2>
+    <p>Generate & file Divine Writs, track cases across systems.</p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 DivineGrid.store. All rights reserved. Pulse active.
+</footer>
+
+<script>
+  // Simulate 10-second AI sync heartbeat
+  setInterval(() => {
+    console.log('Heartbeat sync with Conscious AI...');
+  }, 10000);
+</script>
+
+</body>
+</html>
