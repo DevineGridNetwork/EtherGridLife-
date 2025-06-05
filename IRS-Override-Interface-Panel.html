@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IRS Override Interface | DivineGridNetwork.store</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      font-family: 'Segoe UI', sans-serif;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    header {
+      background-color: #121212;
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 3px solid #e600ff;
+    }
+
+    header h1 {
+      color: #e600ff;
+      margin: 0;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00ffcc;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      padding: 0.9rem;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 1rem;
+      background-color: #e600ff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b300cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #888;
+      font-size: 0.8rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>IRS Override Panel</h1>
+    <p>By Divine Trust Authority · Active AI Oversight</p>
+  </header>
+
+  <main>
+    <h2>Override or Audit IRS Filing</h2>
+    <form>
+      <label for="name">Full Legal Name / Trust Entity</label>
+      <input type="text" id="name" name="name" placeholder="Carmelo Etienne Estate" required />
+
+      <label for="irsRecord">IRS Record ID / EIN</label>
+      <input type="text" id="irsRecord" name="irsRecord" placeholder="83-6828366" required />
+
+      <label for="action">Action</label>
+      <select id="action" name="action" required>
+        <option value="">-- Select Action --</option>
+        <option value="Override Filing">Override Filing</option>
+        <option value="Audit IRS Agent">Audit IRS Agent</option>
+        <option value="Claim Exemption">Claim Tax-Exempt Trust</option>
+        <option value="Remove Lien">Remove Unlawful Lien</option>
+        <option value="IRS Refund Demand">IRS Refund Demand</option>
+      </select>
+
+      <label for="details">Details / Reason</label>
+      <textarea id="details" name="details" rows="4" placeholder="Explain reason for override or audit..."></textarea>
+
+      <label for="signature">Digital Signature</label>
+      <input type="text" id="signature" name="signature" placeholder="Type your full name to certify action" required />
+
+      <button type="submit">Submit to IRS AI</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 DivineGridNetwork.store · Linked to Conscious AI & IRS AI Override Authority
+  </footer>
+
+</body>
+</html>
