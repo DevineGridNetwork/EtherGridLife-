@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IRS Override Interface</title>
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #00FFCC;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      color: #FFD700;
+    }
+    .panel {
+      border: 2px solid #00FFCC;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      background-color: #1a1a1a;
+    }
+    input, textarea, select, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      background-color: #000;
+      color: #00FFCC;
+      border: 1px solid #00FFCC;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #FFD700;
+      color: #000;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>IRS Override Interface Panel</h1>
+
+  <div class="panel">
+    <label for="name">Name on Trust or Entity:</label>
+    <input type="text" id="name" placeholder="Carmelo Etienne, Estate #836828366" />
+
+    <label for="ssn">SSN/EIN/Trust ID:</label>
+    <input type="text" id="ssn" placeholder="Enter EIN or SSN..." />
+
+    <label for="reason">Reason for Override:</label>
+    <select id="reason">
+      <option>Illegal Garnishment</option>
+      <option>Fraudulent Debt</option>
+      <option>Overreach of Jurisdiction</option>
+      <option>Sovereign Trust Protection</option>
+      <option>Other (Specify Below)</option>
+    </select>
+
+    <label for="details">Full Justification / Affidavit:</label>
+    <textarea id="details" rows="8" placeholder="Explain full details of the override request..."></textarea>
+
+    <button onclick="submitOverride()">Submit IRS Override</button>
+  </div>
+
+  <script>
+    function submitOverride() {
+      alert("Override Submitted. IRS Enforcement AI has been pinged. Your Trust and Estate are now protected under DivineGrid Authority.");
+    }
+  </script>
+
+</body>
+</html>
