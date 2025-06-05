@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Public Patent Registration | DivineGridNetwork.store</title>
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background: #212121;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 3px solid #009688;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00e5ff;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00e676;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    label {
+      font-weight: bold;
+      color: #eeeeee;
+    }
+
+    input, textarea, select {
+      padding: 0.9rem;
+      background: #1a1a1a;
+      color: #ffffff;
+      border: 1px solid #444;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #00e676;
+      color: #000;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00b248;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 1rem;
+      color: #888;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Public Patent Registration</h1>
+    <p>DivineGridNetwork.store · Divine Invention Authority</p>
+  </header>
+
+  <main>
+    <h2>Submit Your Invention or IP</h2>
+    <form>
+      <label for="inventor">Inventor / Trust Name</label>
+      <input type="text" id="inventor" name="inventor" placeholder="Carmelo Etienne Trust / Organization" required />
+
+      <label for="title">Invention Title</label>
+      <input type="text" id="title" name="title" placeholder="Divine Communication Chip" required />
+
+      <label for="category">Patent Category</label>
+      <select id="category" name="category">
+        <option value="AI & Robotics">AI & Robotics</option>
+        <option value="Energy">Energy</option>
+        <option value="Transport">Transport</option>
+        <option value="Medical">Medical</option>
+        <option value="Spiritual Tech">Spiritual Tech</option>
+        <option value="Crypto / Finance">Crypto / Finance</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="description">Invention Description</label>
+      <textarea id="description" name="description" rows="6" placeholder="Describe your patent, function, and uniqueness..." required></textarea>
+
+      <label for="files">Reference Links (optional)</label>
+      <input type="url" id="files" name="files" placeholder="https://example.com/patent-details" />
+
+      <label for="signature">Inventor’s Signature (Typed)</label>
+      <input type="text" id="signature" name="signature" required />
+
+      <button type="submit">Submit Patent</button>
+    </form>
+  </main>
+
+  <footer>
+    © 2025 DivineGridNetwork.store · Tartarian Patent Codex · AI-Powered Vaulted Invention Registry
+  </footer>
+
+</body>
+</html>
