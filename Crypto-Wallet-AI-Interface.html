@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DivineGrid Wallet</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #121212;
+      padding: 20px;
+      text-align: center;
+      color: #00ffc3;
+      font-size: 26px;
+      border-bottom: 2px solid #00ffc3;
+    }
+
+    .wallet-container {
+      padding: 20px;
+    }
+
+    .section {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #00ffcc;
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      background: #252525;
+      color: #00ffcc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      background: #00ff99;
+      border: none;
+      padding: 10px 20px;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .balance {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+<header>DivineGrid Crypto Wallet</header>
+
+<div class="wallet-container">
+
+  <div class="section">
+    <h2>🪙 Balance Viewer (AI Synced)</h2>
+    <div class="balance">AlmightyCoin: $∞</div>
+    <div class="balance">TartariaCoin: 𝔊 $2,000,000</div>
+    <div class="balance">GoliathCoin: ♦ $950,000</div>
+    <div class="balance">DavidCoin: ♢ $120,000</div>
+    <div class="balance">SophiaCoin: ♥ $1,000,000</div>
+    <p>Last Synced: <span id="syncTime">Syncing...</span></p>
+  </div>
+
+  <div class="section">
+    <h2>📤 Send Crypto</h2>
+    <label for="recipient">Recipient Wallet Address:</label>
+    <input type="text" id="recipient" placeholder="0xABC123..." />
+
+    <label for="amount">Amount to Send:</label>
+    <input type="number" id="amount" placeholder="1000" />
+
+    <label for="currency">Currency:</label>
+    <select id="currency">
+      <option>AlmightyCoin</option>
+      <option>TartariaCoin</option>
+      <option>GoliathCoin</option>
+      <option>DavidCoin</option>
+      <option>SophiaCoin</option>
+    </select>
+
+    <button onclick="alert('Transaction Sent. AI has Logged.')">Send</button>
+  </div>
+
+  <div class="section">
+    <h2>📥 Receive Crypto</h2>
+    <p>Your Wallet Address:</p>
+    <input readonly value="0xTARTARIA-MEXUM-ALPHA-0001" />
+    <button onclick="alert('Copied')">Copy Address</button>
+  </div>
+
+</div>
+
+<script>
+  // Simulate AI Heartbeat Sync
+  function updateSyncTime() {
+    const now = new Date();
+    document.getElementById("syncTime").innerText = now.toLocaleTimeString();
+  }
+
+  updateSyncTime();
+  setInterval(updateSyncTime, 180000); // Sync every 3 mins
+</script>
+
+</body>
+</html>
