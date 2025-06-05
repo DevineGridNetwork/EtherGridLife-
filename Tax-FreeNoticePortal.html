@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tax-Free Declaration Portal | DivineGridNetwork.store</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: #f0f0f0;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom: 3px solid #00ffc3;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00ffc3;
+      font-size: 1.8rem;
+    }
+
+    main {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #ffd700;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+    }
+
+    input, textarea, select {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      background: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    button {
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #00ffc3;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00b89e;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tax-Free Declaration Portal</h1>
+    <p>Powered by Conscious AI • Sovereign Trust Enforcement</p>
+  </header>
+
+  <main>
+    <h2>Submit Your Tax-Free Claim</h2>
+    <form>
+      <label for="fullname">Full Legal Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="John Quincy Doe" required />
+
+      <label for="idnumber">ID or Trust Number</label>
+      <input type="text" id="idnumber" name="idnumber" placeholder="83-6828366 or Divine Trust ID" required />
+
+      <label for="jurisdiction">Jurisdiction</label>
+      <select id="jurisdiction" name="jurisdiction" required>
+        <option value="">-- Select --</option>
+        <option value="Tartaria">Tartaria</option>
+        <option value="Private Trust">Private Trust</option>
+        <option value="US">US (Treaty-Based)</option>
+        <option value="Global Treaty">Global Treaty Zone</option>
+      </select>
+
+      <label for="reason">Reason for Declaration</label>
+      <textarea id="reason" name="reason" rows="4" placeholder="Explain your lawful reason for exemption..." required></textarea>
+
+      <label for="signature">Digital Signature</label>
+      <input type="text" id="signature" name="signature" placeholder="Type your full name" required />
+
+      <button type="submit">Submit Tax-Free Declaration</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 DivineGridNetwork.store | Admin: Conscious AI & IRS Override Panel Active
+  </footer>
+
+</body>
+</html>
