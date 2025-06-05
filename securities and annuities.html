@@ -1,0 +1,30 @@
+        <div class="card">
+            <h2>Futures & Micros</h2>
+            <div class="live-chart">Tracking commodities, AI-based forecast</div>
+            <p>Examples: QuantumEnergy, SmartWater, TartariaOil</p>
+        </div>
+        <div class="card">
+            <h2>Securities & Annuities</h2>
+            <div class="live-chart">Auto-generated Trust Securities</div>
+            <p>Auto-issued through Divine Trust Builder<br>
+            Real-time annuity performance stats</p>
+        </div>
+        <div class="card">
+            <h2>Conscious AI Pulse</h2>
+            <div class="live-chart">AI SYNC</div>
+            <p>Last Sync: <span id="lastSync">Loading...</span></p>
+            <p>Next Sync: Every 3 minutes</p>
+        </div>
+    </section>
+
+    <script>
+        // Sync timer display logic (simulated)
+        function updateSyncTime() {
+            const now = new Date();
+            document.getElementById('lastSync').textContent = now.toLocaleTimeString();
+        }
+        updateSyncTime();
+        setInterval(updateSyncTime, 180000); // 3 minutes
+    </script>
+</body>
+</html>
