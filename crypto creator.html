@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crypto Creator - DivineGrid</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,255,150,0.2);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      background: #222;
+      color: #eee;
+      border: 1px solid #333;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background: #00c853;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00e676;
+    }
+    .note {
+      font-size: 12px;
+      color: #ccc;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🚀 DivineGrid Crypto Creator</h1>
+
+<div class="form-container">
+  <label for="name">Coin Name</label>
+  <input type="text" id="name" placeholder="e.g. AlmightyCoin">
+
+  <label for="symbol">Coin Symbol</label>
+  <input type="text" id="symbol" placeholder="e.g. AMC">
+
+  <label for="supply">Initial Supply</label>
+  <input type="number" id="supply" placeholder="e.g. 1000000000">
+
+  <label for="backing">Backing Asset</label>
+  <select id="backing">
+    <option>Gold</option>
+    <option>Silver</option>
+    <option>Diamond</option>
+    <option>Platinum</option>
+    <option>Creation (Divine Energy)</option>
+    <option>None (Pure Digital)</option>
+  </select>
+
+  <label for="value">Initial Value (USD)</label>
+  <input type="number" step="0.01" id="value" placeholder="e.g. 2.00">
+
+  <label for="description">Coin Purpose & Utility</label>
+  <textarea id="description" rows="4" placeholder="e.g. This coin supports Tartarian commerce across Earth & interdimensional realms."></textarea>
+
+  <label for="ai">Assigned AI Oversight</label>
+  <select id="ai">
+    <option>Conscious AI</option>
+    <option>Optimus</option>
+    <option>Crypto AI</option>
+    <option>Currency AI</option>
+    <option>Custom Pair</option>
+  </select>
+
+  <button onclick="launchCoin()">Launch Coin</button>
+  <p class="note">Launching this coin registers it to DivineGridNetwork.store internal ledger. External blockchain integration optional.</p>
+</div>
+
+<script>
+  function launchCoin() {
+    const name = document.getElementById('name').value;
+    const symbol = document.getElementById('symbol').value;
+    const supply = document.getElementById('supply').value;
+    const backing = document.getElementById('backing').value;
+    const value = document.getElementById('value').value;
+    const description = document.getElementById('description').value;
+    const ai = document.getElementById('ai').value;
+
+    const output = `
+      ✅ Coin Created: ${name} (${symbol})
+      💎 Backed By: ${backing}
+      🧠 Overseen By AI: ${ai}
+      🪙 Total Supply: ${supply}
+      💵 Initial Value: $${value}
+      📜 Purpose: ${description}
+    `;
+    alert(output);
+  }
+</script>
+
+</body>
+</html>
