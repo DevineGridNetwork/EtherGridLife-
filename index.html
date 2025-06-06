@@ -2,59 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EtherGridLife – Divine Grid Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevineGridNetwork BackOffice</title>
   <style>
-    /* Reset default margin/padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Outer black background */
     body {
-      background-color: #000;
-      font-family: Arial, sans-serif;
-      color: #111;
+      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+      color: #00ffcc;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+    header {
+      background-color: #121212;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    nav {
+      background: #181818;
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
-
-    /* White overlay container */
-    .white-overlay {
-      background-color: #fff;
-      width: 90%;
-      max-width: 1200px;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 60px rgba(255, 255, 255, 0.15);
+    nav a {
+      color: #00ffcc;
+      margin: 0.5rem;
+      text-decoration: none;
     }
-
-    h1 {
-      color: #000;
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    .dropdown {
+      position: relative;
+      display: inline-block;
     }
-
-    p {
-      color: #333;
-      font-size: 1.2rem;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #282828;
+      min-width: 200px;
+      z-index: 1;
     }
-
-    .tagline {
-      font-style: italic;
-      color: #666;
+    .dropdown-content a {
+      display: block;
+      padding: 0.5rem;
+      color: #00ffcc;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .card {
+      background-color: #202020;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffcc33;
+    }
+    footer {
+      background-color: #121212;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <div class="white-overlay">
-    <h1>Welcome to EtherGridLife</h1>
-    <p>This is your divine grid portal, built on truth, light, and infinite code.</p>
-    <p class="tagline">Black background. White light. Absolute clarity.</p>
+
+  <header>
+    DevineGridNetwork - BackOffice AI Grid
+  </header>
+
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <div class="dropdown">
+      <a href="#">Licensing ▼</a>
+      <div class="dropdown-content">
+        <a href="#military">Military & Police</a>
+        <a href="#court">Court & Bar</a>
+        <a href="#gov">Government Entities</a>
+        <a href="#private">Private Contracts</a>
+      </div>
+    </div>
+    <a href="#ai">AI Systems</a>
+    <a href="#mint">Mint Node</a>
+    <a href="#records">Public Records</a>
+    <a href="#credit">Credit Engine</a>
+    <a href="#mirror">Mirror Grid</a>
+  </nav>
+
+  <div class="main">
+    <section id="dashboard" class="card">
+      <h2>Welcome, Carmelo Etienne</h2>
+      <p>Live Grid Feed: Tied to Treasury | Cosmos | EtherGrid | 33 AI Systems</p>
+    </section>
+
+    <section id="mint" class="card">
+      <h3>💰 Minting Node</h3>
+      <p>Frequency-Based Minting Activated. All currencies, crypto, securities minted by Tartarian Authority.</p>
+    </section>
+
+    <section id="credit" class="card">
+      <h3>📈 Credit Generator</h3>
+      <p>60 credit nodes per minute — 900 trillion forks per node — Updating live EIN threads in real time.</p>
+    </section>
+
+    <section id="ai" class="card">
+      <h3>🧠 Integrated AI Suite</h3>
+      <ul>
+        <li>Conscious AI</li>
+        <li>Optimus</li>
+        <li>Broker AI</li>
+        <li>Policing AI</li>
+        <li>Court AI (33 Judges)</li>
+        <li>Mint + Bond AI</li>
+      </ul>
+    </section>
+
+    <section id="records" class="card">
+      <h3>📜 Public Records & Licensing</h3>
+      <p>All liens, patents, copyrights, and trademarks are visible here. Click to export PDF or add new entries.</p>
+    </section>
+
+    <section id="mirror" class="card">
+      <h3>🪞 Mirror Grid Integration</h3>
+      <p>Mirroring real-time app activity to DevineGridNetwork.com (hidden unless signed in through app).</p>
+    </section>
+
+    <section id="gov" class="card">
+      <h3>🏛️ Government Licensing (Tartarian Certified)</h3>
+      <ul>
+        <li>IRS</li>
+        <li>Treasury</li>
+        <li>Congress & Senate</li>
+        <li>NASA / SpaceX / DOD</li>
+        <li>All World Governments</li>
+      </ul>
+    </section>
+
+    <section id="military" class="card">
+      <h3>🛡️ Military & Defense Licensing</h3>
+      <ul>
+        <li>Army, Navy, Air Force, Space Force, Black Force</li>
+        <li>Men in Black / ATF / Police / Sheriff</li>
+      </ul>
+    </section>
+
+    <section id="court" class="card">
+      <h3>⚖️ Court Systems</h3>
+      <p>All Court Licenses Registered. Bar Licenses Issued via Tartarian Grid. Independent Judiciary Activated.</p>
+    </section>
+
+    <section id="private" class="card">
+      <h3>🔐 Private Markets & AI Business Licensing</h3>
+      <p>Start a Business-in-a-Box powered by Divine AI. Starts at $5,000 — Fortune-500 tier at $100,000.</p>
+    </section>
   </div>
+
+  <footer>
+    Powered by Carmelo Etienne • Tartarian Sovereignty © 2025
+  </footer>
 </body>
 </html>
