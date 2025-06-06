@@ -124,3 +124,88 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DivineGridNetwork Market Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color:#0f0f0f; color:#ffffff; font-family: Arial, sans-serif; text-align: center;">
+
+  <h1>📈 DivineGrid Market | Real-Time Public & Private Market</h1>
+  <p>View real-time public stock activity synced to Tartarian Market Records.</p>
+
+  <!-- Tesla (TSLA) Chart -->
+  <div class="tradingview-widget-container">
+    <div id="tradingview_tesla"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+      new TradingView.widget({
+        "width": "100%",
+        "height": 500,
+        "symbol": "NASDAQ:TSLA",
+        "interval": "5",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_top_toolbar": true,
+        "save_image": false,
+        "container_id": "tradingview_tesla"
+      });
+    </script>
+  </div>
+
+  <!-- Apple (AAPL) Chart -->
+  <div class="tradingview-widget-container">
+    <div id="tradingview_apple"></div>
+    <script type="text/javascript">
+      new TradingView.widget({
+        "width": "100%",
+        "height": 500,
+        "symbol": "NASDAQ:AAPL",
+        "interval": "5",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_top_toolbar": true,
+        "save_image": false,
+        "container_id": "tradingview_apple"
+      });
+    </script>
+  </div>
+
+  <!-- Alphabet/Google (GOOGL) Chart -->
+  <div class="tradingview-widget-container">
+    <div id="tradingview_google"></div>
+    <script type="text/javascript">
+      new TradingView.widget({
+        "width": "100%",
+        "height": 500,
+        "symbol": "NASDAQ:GOOGL",
+        "interval": "5",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "en",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_top_toolbar": true,
+        "save_image": false,
+        "container_id": "tradingview_google"
+      });
+    </script>
+  </div>
+
+  <footer style="margin-top: 40px;">
+    <p>DivineGridNetwork.com – Powered by Tartaria • Real-Time AI Market Ecosystem</p>
+  </footer>
+
+</body>
+</html>
