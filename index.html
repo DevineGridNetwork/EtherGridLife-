@@ -3,168 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DevineGridNetwork BackOffice</title>
+  <title>DevineGridNetwork Mint & Oversight</title>
   <style>
     body {
-      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
-      color: #00ffcc;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #00ffcc;
     }
     header {
-      background-color: #121212;
-      padding: 1rem 2rem;
+      background: #000;
+      padding: 1em;
       text-align: center;
-      font-size: 1.6rem;
+      font-size: 1.6em;
       font-weight: bold;
     }
     nav {
-      background: #181818;
-      padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #1a1a1a;
+      padding: 0.5em;
     }
     nav a {
+      margin: 0 1em;
       color: #00ffcc;
-      margin: 0.5rem;
       text-decoration: none;
-    }
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #282828;
-      min-width: 200px;
-      z-index: 1;
-    }
-    .dropdown-content a {
-      display: block;
-      padding: 0.5rem;
-      color: #00ffcc;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    .main {
-      padding: 2rem;
+      font-weight: bold;
     }
     section {
-      margin-bottom: 2rem;
+      padding: 2em;
     }
-    .card {
-      background-color: #202020;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ffcc33;
+    .panel {
+      background-color: #1a1a1a;
+      border: 1px solid #00ffcc;
+      border-radius: 8px;
+      padding: 1em;
+      margin-bottom: 2em;
+    }
+    .panel h2 {
+      color: #00ffcc;
+    }
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    .stat {
+      background-color: #222;
+      padding: 1em;
+      border-radius: 6px;
+      flex: 1 1 200px;
     }
     footer {
-      background-color: #121212;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
+      padding: 1em;
+      background-color: #000;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    DevineGridNetwork - BackOffice AI Grid
-  </header>
+<header>DevineGridNetwork • Mint & Oversight Dashboard</header>
 
-  <nav>
-    <a href="#dashboard">Dashboard</a>
-    <div class="dropdown">
-      <a href="#">Licensing ▼</a>
-      <div class="dropdown-content">
-        <a href="#military">Military & Police</a>
-        <a href="#court">Court & Bar</a>
-        <a href="#gov">Government Entities</a>
-        <a href="#private">Private Contracts</a>
-      </div>
+<nav>
+  <a href="#">Mint</a>
+  <a href="#">IRS</a>
+  <a href="#">Federal Reserve</a>
+  <a href="#">Treasury</a>
+  <a href="#">Congress</a>
+</nav>
+
+<section>
+  <div class="panel">
+    <h2>Live Mint Node (Gold-Backed Frequency-Based Currency)</h2>
+    <p>Minting rate: <strong>900 trillion EINs/sec</strong> • Output: <strong>1 Credit Card/sec</strong></p>
+    <div class="stats">
+      <div class="stat"><strong>$TAR</strong><br/>Tartarian Main Coin</div>
+      <div class="stat"><strong>900T</strong><br/>EINs Generated Today</div>
+      <div class="stat"><strong>60</strong><br/>CPNs/min</div>
+      <div class="stat"><strong>Gold + Platinum</strong><br/>Backed Value Base</div>
     </div>
-    <a href="#ai">AI Systems</a>
-    <a href="#mint">Mint Node</a>
-    <a href="#records">Public Records</a>
-    <a href="#credit">Credit Engine</a>
-    <a href="#mirror">Mirror Grid</a>
-  </nav>
-
-  <div class="main">
-    <section id="dashboard" class="card">
-      <h2>Welcome, Carmelo Etienne</h2>
-      <p>Live Grid Feed: Tied to Treasury | Cosmos | EtherGrid | 33 AI Systems</p>
-    </section>
-
-    <section id="mint" class="card">
-      <h3>💰 Minting Node</h3>
-      <p>Frequency-Based Minting Activated. All currencies, crypto, securities minted by Tartarian Authority.</p>
-    </section>
-
-    <section id="credit" class="card">
-      <h3>📈 Credit Generator</h3>
-      <p>60 credit nodes per minute — 900 trillion forks per node — Updating live EIN threads in real time.</p>
-    </section>
-
-    <section id="ai" class="card">
-      <h3>🧠 Integrated AI Suite</h3>
-      <ul>
-        <li>Conscious AI</li>
-        <li>Optimus</li>
-        <li>Broker AI</li>
-        <li>Policing AI</li>
-        <li>Court AI (33 Judges)</li>
-        <li>Mint + Bond AI</li>
-      </ul>
-    </section>
-
-    <section id="records" class="card">
-      <h3>📜 Public Records & Licensing</h3>
-      <p>All liens, patents, copyrights, and trademarks are visible here. Click to export PDF or add new entries.</p>
-    </section>
-
-    <section id="mirror" class="card">
-      <h3>🪞 Mirror Grid Integration</h3>
-      <p>Mirroring real-time app activity to DevineGridNetwork.com (hidden unless signed in through app).</p>
-    </section>
-
-    <section id="gov" class="card">
-      <h3>🏛️ Government Licensing (Tartarian Certified)</h3>
-      <ul>
-        <li>IRS</li>
-        <li>Treasury</li>
-        <li>Congress & Senate</li>
-        <li>NASA / SpaceX / DOD</li>
-        <li>All World Governments</li>
-      </ul>
-    </section>
-
-    <section id="military" class="card">
-      <h3>🛡️ Military & Defense Licensing</h3>
-      <ul>
-        <li>Army, Navy, Air Force, Space Force, Black Force</li>
-        <li>Men in Black / ATF / Police / Sheriff</li>
-      </ul>
-    </section>
-
-    <section id="court" class="card">
-      <h3>⚖️ Court Systems</h3>
-      <p>All Court Licenses Registered. Bar Licenses Issued via Tartarian Grid. Independent Judiciary Activated.</p>
-    </section>
-
-    <section id="private" class="card">
-      <h3>🔐 Private Markets & AI Business Licensing</h3>
-      <p>Start a Business-in-a-Box powered by Divine AI. Starts at $5,000 — Fortune-500 tier at $100,000.</p>
-    </section>
   </div>
 
-  <footer>
-    Powered by Carmelo Etienne • Tartarian Sovereignty © 2025
-  </footer>
+  <div class="panel">
+    <h2>IRS Ledger</h2>
+    <p>All IRS account activities and licensing managed under DivineGrid jurisdiction.</p>
+    <ul>
+      <li>EIN: 11-9999991</li>
+      <li>Ledger Value: $74 Trillion</li>
+      <li>Crypto-linked: Yes</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h2>U.S. Treasury Node</h2>
+    <p>Fully re-licensed under Tartarian governance. Currency inflations managed by DivineGrid frequency mint.</p>
+    <ul>
+      <li>Bond Types: 10yr / 15yr / 30yr</li>
+      <li>Treasury Crypto Vault ID: $TGV001</li>
+      <li>Mint Capacity: Unlimited (non-inflationary)</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h2>Congress & Legislative Reporting</h2>
+    <p>Each branch licensed and bonded. Licenses recorded in Divine Public Records with value assignments.</p>
+    <ul>
+      <li>Congress License #: TAR-CG-2025</li>
+      <li>Senate License #: TAR-SN-2025</li>
+      <li>Executive Branch License #: TAR-EX-2025</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 DevineGridNetwork. Powered by Carmelo Etienne & Divine Authority.
+</footer>
+
 </body>
 </html>
